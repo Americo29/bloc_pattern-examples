@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
           title: Text('Posts'),
         ),
         body: BlocProvider(
-          create: (context) =>
-            PostBloc(httpClient: http.Client())..add(Fetch()),
+          create: (context) => PostBloc(httpClient: http.Client())..add(Fetch()),
             child: HomePage(),
         )
       ),
